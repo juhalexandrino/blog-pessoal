@@ -27,8 +27,8 @@ CREATE TABLE [tb_usuarios] (
 GO
 CREATE TABLE [tb_postagens] (
 	Id bigint NOT NULL,
-	Titulo varchar(255) NOT NULL,
-	Texto varchar(255) NOT NULL,
+	Titulo varchar(100) NOT NULL,
+	Texto varchar(100) NOT NULL,
 	Data datetimeoffset NOT NULL,
 	TemaId integer NOT NULL,
 	UsuarioId integer NOT NULL,
