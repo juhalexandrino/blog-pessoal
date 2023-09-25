@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aVsVOMEMwHmSfmRTM9ZhqjduR1LN8pbOoTsFH3MgRUix1se+Mx/q2dmIndRBKP1Qao8rbygcaKB8DmHa+t3BNg==",
+  "dgSpecHash": "fphPMeSdUVkmgeoy06PKqfrH0B5taHBRDTrc6ith0giWvsik8YizDWMV8S7WJrYO3ztZhvOvHnzY8MDwnzJNHw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\julia\\Desktop\\Blog Pessoal\\blogpessoal\\blogpessoal.csproj",
+  "projectFilePath": "C:\\Users\\julia\\Documents\\Tecnologia\\Cursos\\Generation .NET 03\\Bloco 02\\Blog Pessoal\\blogpessoal\\blogpessoal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\julia\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\julia\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
