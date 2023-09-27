@@ -1,9 +1,6 @@
 ﻿using blogpessoal.Service;
-using blogpessoal.Model;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Identity.Client;
-using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace blogpessoal.Controllers
 {
@@ -50,7 +47,10 @@ namespace blogpessoal.Controllers
             if (!validarPostagem.IsValid)
                 return StatusCode(StatusCodes.Status400BadRequest, validarPostagem);
 
-            await _postagemService.Create(postagem);
+            var Resposta = await _postagemService.Create(postagem);
+
+            if(Resposta is null)
+                return NotFound("Postagem e/ou tema não encontrado.");
 
             return CreatedAtAction(nameof(GetById), new { id = postagem.Id }, postagem);
         }
@@ -59,14 +59,12 @@ namespace blogpessoal.Controllers
         public async Task<ActionResult> Update([FromBody] Postagem postagem)
         {
             if (postagem.Id == 0)
-                return BadRequest("Id da postagem é invalído");
+                return BadRequest("Id da postagem é invalído.");
 
             var validarPostagem = await _postagemValidator.ValidateAsync(postagem);
 
             if (!validarPostagem.IsValid)
             {
-
-
                 return StatusCode(StatusCodes.Status400BadRequest, validarPostagem);
             }
 
@@ -84,7 +82,7 @@ namespace blogpessoal.Controllers
             var BuscaPostagem = await _postagemService.GetById(id);
 
             if (BuscaPostagem is null)
-                return NotFound("Postagem não foi encontrada!");
+                return NotFound("A postagem não foi encontrada!");
 
             await _postagemService.Delete(BuscaPostagem);
 

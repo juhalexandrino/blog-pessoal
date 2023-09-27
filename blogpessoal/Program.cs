@@ -1,4 +1,5 @@
 using blogpessoal.Data;
+using blogpessoal.Model;
 using blogpessoal.Service;
 using blogpessoal.Service.Implements;
 using blogpessoal.Validator;
@@ -15,7 +16,12 @@ namespace blogpessoal
 
             // Add services to the container.
 
-            builder.Services.AddControllers();
+            builder.Services.AddControllers()
+                   .AddNewtonsoftJson(options =>
+            {
+            options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            });
+
 
             // Conexão com o banco de dados
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -26,9 +32,11 @@ namespace blogpessoal
 
             // Registrar as classes de serviço (Service)
             builder.Services.AddScoped<IPostagemService, PostagemService>();
+            builder.Services.AddScoped<ITemaService, TemaService>();
 
             //Registrar a validação das entidades
             builder.Services.AddTransient<IValidator<Postagem>, PostagemValidator>();
+            builder.Services.AddTransient<IValidator<Tema>, TemaValidator>();
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
