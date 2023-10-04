@@ -1,13 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "fphPMeSdUVkmgeoy06PKqfrH0B5taHBRDTrc6ith0giWvsik8YizDWMV8S7WJrYO3ztZhvOvHnzY8MDwnzJNHw==",
+  "dgSpecHash": "ukcmRJP8mWdhzNh6mdOJJ8GLxvi1cV2ujA+eIV4LURcNAa+2OH++NuWiQJVtpvK+7EUIV0HQPX6Te7Q2ZcFFjQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\julia\\Documents\\Tecnologia\\Cursos\\Generation .NET 03\\Bloco 02\\Blog Pessoal\\blogpessoal\\blogpessoal.csproj",
+  "projectFilePath": "C:\\Users\\julia\\Desktop\\bloguinho\\blogpessoal\\blogpessoal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\julia\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\julia\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\julia\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\julia\\.nuget\\packages\\fluentvalidation\\11.7.1\\fluentvalidation.11.7.1.nupkg.sha512",
     "C:\\Users\\julia\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\julia\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.11\\microsoft.aspnetcore.authentication.jwtbearer.7.0.11.nupkg.sha512",
     "C:\\Users\\julia\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.11\\microsoft.aspnetcore.jsonpatch.7.0.11.nupkg.sha512",
     "C:\\Users\\julia\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\7.0.11\\microsoft.aspnetcore.mvc.newtonsoftjson.7.0.11.nupkg.sha512",
     "C:\\Users\\julia\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.10\\microsoft.aspnetcore.openapi.7.0.10.nupkg.sha512",
