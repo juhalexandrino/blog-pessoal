@@ -23,6 +23,7 @@ namespace blogpessoal.Service.Implements
             try
             {
                 var Tema = await _context.Temas
+                    .Include(t => t.Postagem)
                     .FirstAsync(i => i.Id == id);
                 return Tema;
             }

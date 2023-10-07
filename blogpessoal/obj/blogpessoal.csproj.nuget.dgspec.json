@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\julia\\Desktop\\bloguinho\\blogpessoal\\blogpessoal.csproj": {}
+    "C:\\Users\\julia\\Documents\\Tecnologia\\Cursos\\Generation .NET 03\\Bloco 02\\Blog Pessoal\\blogpessoal\\blogpessoal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\julia\\Desktop\\bloguinho\\blogpessoal\\blogpessoal.csproj": {
+    "C:\\Users\\julia\\Documents\\Tecnologia\\Cursos\\Generation .NET 03\\Bloco 02\\Blog Pessoal\\blogpessoal\\blogpessoal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\julia\\Desktop\\bloguinho\\blogpessoal\\blogpessoal.csproj",
+        "projectUniqueName": "C:\\Users\\julia\\Documents\\Tecnologia\\Cursos\\Generation .NET 03\\Bloco 02\\Blog Pessoal\\blogpessoal\\blogpessoal.csproj",
         "projectName": "blogpessoal",
-        "projectPath": "C:\\Users\\julia\\Desktop\\bloguinho\\blogpessoal\\blogpessoal.csproj",
+        "projectPath": "C:\\Users\\julia\\Documents\\Tecnologia\\Cursos\\Generation .NET 03\\Bloco 02\\Blog Pessoal\\blogpessoal\\blogpessoal.csproj",
         "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\julia\\Desktop\\bloguinho\\blogpessoal\\obj\\",
+        "outputPath": "C:\\Users\\julia\\Documents\\Tecnologia\\Cursos\\Generation .NET 03\\Bloco 02\\Blog Pessoal\\blogpessoal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\julia\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -13,6 +13,7 @@ namespace blogpessoal.Model
         [StringLength(100)]
         public string Descricao { get; set; } = string.Empty;
 
+        [InverseProperty("Tema")]
         public virtual ICollection<Postagem>? Postagem { get; set; }
     }
 }

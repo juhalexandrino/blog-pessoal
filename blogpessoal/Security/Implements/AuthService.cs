@@ -33,7 +33,9 @@ namespace blogpessoal.Security.Implements
                 return null;
 
             var tokenHandler = new JwtSecurityTokenHandler();
+            
             var tokenKey = Encoding.UTF8.GetBytes(Settings.Secret);
+            
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new Claim[]

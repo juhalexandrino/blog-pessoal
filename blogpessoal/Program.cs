@@ -24,7 +24,8 @@ namespace blogpessoal
             builder.Services.AddControllers()
                    .AddNewtonsoftJson(options =>
             {
-            options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+                    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+                    options.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
             });
 
 
@@ -100,6 +101,9 @@ namespace blogpessoal
 
             //Inicia o CORS
             app.UseCors("MyPolicy");
+            
+            app.UseAuthentication();
+            
             app.UseAuthorization();
 
             app.MapControllers();

@@ -1,9 +1,11 @@
 ﻿using blogpessoal.Service;
 using FluentValidation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace blogpessoal.Controllers
 {
+    [Authorize]
     [Route("~/postagens")]
     [ApiController]
     public class PostagemController : ControllerBase
@@ -30,6 +32,7 @@ namespace blogpessoal.Controllers
 
             if (Resposta is null)
                 return NotFound();
+
             return Ok(Resposta);
         }
 
@@ -50,7 +53,7 @@ namespace blogpessoal.Controllers
             var Resposta = await _postagemService.Create(postagem);
 
             if(Resposta is null)
-                return NotFound("Postagem e/ou tema não encontrado.");
+                return NotFound("Postagem não encontrada!");
 
             return CreatedAtAction(nameof(GetById), new { id = postagem.Id }, postagem);
         }
@@ -58,7 +61,7 @@ namespace blogpessoal.Controllers
         [HttpPut]
         public async Task<ActionResult> Update([FromBody] Postagem postagem)
         {
-            if (postagem.Id == 0)
+            if (postagem.Id <= 0)
                 return BadRequest("Id da postagem é invalído.");
 
             var validarPostagem = await _postagemValidator.ValidateAsync(postagem);
@@ -71,7 +74,7 @@ namespace blogpessoal.Controllers
             var Resposta = await _postagemService.Update(postagem);
 
             if (Resposta is null)
-                return NotFound("Postagem não encontrada!");
+                return NotFound("Postagem e/ou tema não encontrado!");
 
             return Ok(Resposta);
         }

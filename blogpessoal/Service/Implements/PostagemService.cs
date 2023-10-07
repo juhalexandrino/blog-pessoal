@@ -22,8 +22,12 @@ namespace blogpessoal.Service.Implements
         {
             try
             {
-            var Postagem = await _context.Postagens.FirstAsync(i => i.Id == id);
-                return Postagem;
+                var postagem = await _context.Postagens
+                    .Include(p => p.Tema)
+                    .Include(p => p.Usuario)
+                    .FirstAsync(i => i.Id == id);
+                
+                return postagem;
             }
             catch
             {
@@ -75,11 +79,14 @@ namespace blogpessoal.Service.Implements
             if (PostagemUpdate is null)
                 return null;
 
-            postagem.Tema = postagem.Tema is not null ? _context.Temas.FirstOrDefault(t => t.Id == postagem.Tema.Id) : null;
+            postagem.Tema = postagem.Tema is not null ? _context.Temas
+                .FirstOrDefault(t => t.Id == postagem.Tema.Id) : null;
+
             postagem.Usuario = postagem.Usuario is not null ? _context.Users.FirstOrDefault(u => u.Id == postagem.Usuario.Id) : null;
 
             _context.Entry(PostagemUpdate).State = EntityState.Detached;
             _context.Entry(postagem).State = EntityState.Modified;
+            
             await _context.SaveChangesAsync();
 
             return postagem;
@@ -87,6 +94,7 @@ namespace blogpessoal.Service.Implements
         public async Task Delete(Postagem postagem)
         {
             _context.Remove(postagem);
+            
             await _context.SaveChangesAsync();
         }
     }

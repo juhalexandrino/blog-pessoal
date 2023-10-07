@@ -22,12 +22,14 @@ namespace blogpessoal.Controllers
             _authService = authService;
         }
 
+        [Authorize]
         [HttpGet("all")]
         public async Task<ActionResult> GetAll()
         {
             return Ok(await _userService.GetAll());
         }
 
+        [Authorize]
         [HttpGet("{id}")]
         public async Task<ActionResult> GetById(long id)
         {
@@ -39,6 +41,7 @@ namespace blogpessoal.Controllers
             return Ok(Resposta);
         }
 
+        [AllowAnonymous]
         [HttpPost("cadastrar")]
         public async Task<ActionResult> Create([FromBody] User user)
         {
@@ -50,11 +53,12 @@ namespace blogpessoal.Controllers
             var Resposta = await _userService.Create(user);
 
             if (Resposta is null)
-                return BadRequest("Usuário já cadastrado! Tente novamente.");
+                return BadRequest("Usuário já cadastrado. Tente novamente!");
 
             return CreatedAtAction(nameof(GetById), new { id = user.Id }, user);
         }
 
+        [Authorize]
         [HttpPut("atualizar")]
         public async Task<ActionResult> Update([FromBody] User user)
         {
