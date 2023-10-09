@@ -86,6 +86,7 @@ namespace blogpessoal
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
+            
             //Registrar o Swagger
             builder.Services.AddSwaggerGen(options =>
             {
@@ -105,16 +106,15 @@ namespace blogpessoal
                     License = new OpenApiLicense
                     {
                         Name = "GitHub",
-                        Url = new Uri("https://github.com/juhalexandrino")
+                        Url = new Uri("https://gitub.com/juhalexandrino/")
                     }
-
                 });
 
                 //Adicionar a Segurança no Swagger
                 options.AddSecurityDefinition("JWT", new OpenApiSecurityScheme
                 {
                     In = ParameterLocation.Header,
-                    Description = "Digite um Token JWT válido!",
+                    Description = "Digite um token JWT válido!",
                     Name = "Authorization",
                     Type = SecuritySchemeType.Http,
                     BearerFormat = "JWT",
@@ -156,9 +156,10 @@ namespace blogpessoal
             // Habilitar o Swagger
 
             app.UseSwagger();
-            
+            app.UseSwaggerUI();
+
             // Swagger como página inicialn na nuvem
-            
+
             if (app.Environment.IsProduction())
             {
                 app.UseSwaggerUI(options =>

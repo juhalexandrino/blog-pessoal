@@ -249,3 +249,5 @@ C:\Users\julia\Documents\Tecnologia\Cursos\Generation .NET 03\Bloco 02\Blog Pess
 C:\Users\julia\Documents\Tecnologia\Cursos\Generation .NET 03\Bloco 02\Blog Pessoal\blogpessoal\bin\Debug\net7.0\Scrutor.dll
 C:\Users\julia\Documents\Tecnologia\Cursos\Generation .NET 03\Bloco 02\Blog Pessoal\blogpessoal\bin\Debug\net7.0\Swashbuckle.AspNetCore.Filters.dll
 C:\Users\julia\Documents\Tecnologia\Cursos\Generation .NET 03\Bloco 02\Blog Pessoal\blogpessoal\bin\Debug\net7.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
+C:\Users\julia\Documents\Tecnologia\Cursos\Generation .NET 03\Bloco 02\Blog Pessoal\blogpessoal\bin\Debug\net7.0\Npgsql.dll
+C:\Users\julia\Documents\Tecnologia\Cursos\Generation .NET 03\Bloco 02\Blog Pessoal\blogpessoal\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
