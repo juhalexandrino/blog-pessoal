@@ -245,3 +245,7 @@ C:\Users\julia\Desktop\bloguinho\blogpessoal\obj\Debug\net7.0\blogpessoal.genrun
 C:\Users\julia\Desktop\bloguinho\blogpessoal\obj\Debug\net7.0\ref\blogpessoal.dll
 C:\Users\julia\Documents\Tecnologia\Cursos\Generation .NET 03\Bloco 02\Blog Pessoal\blogpessoal\bin\Debug\net7.0\BCrypt.Net-Core.dll
 C:\Users\julia\Documents\Tecnologia\Cursos\Generation .NET 03\Bloco 02\Blog Pessoal\blogpessoal\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\julia\Documents\Tecnologia\Cursos\Generation .NET 03\Bloco 02\Blog Pessoal\blogpessoal\bin\Debug\net7.0\MicroElements.Swashbuckle.FluentValidation.dll
+C:\Users\julia\Documents\Tecnologia\Cursos\Generation .NET 03\Bloco 02\Blog Pessoal\blogpessoal\bin\Debug\net7.0\Scrutor.dll
+C:\Users\julia\Documents\Tecnologia\Cursos\Generation .NET 03\Bloco 02\Blog Pessoal\blogpessoal\bin\Debug\net7.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\julia\Documents\Tecnologia\Cursos\Generation .NET 03\Bloco 02\Blog Pessoal\blogpessoal\bin\Debug\net7.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
