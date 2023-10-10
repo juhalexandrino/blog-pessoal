@@ -31,7 +31,7 @@ namespace blogpessoal
                     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
                 });
 
-            // Conex„o com o Banco de dados
+            // Conex√£o com o Banco de dados
             if (builder.Configuration["Enviroment:Start"] == "PROD")
             {
                 builder.Configuration
@@ -53,19 +53,19 @@ namespace blogpessoal
                     options.UseSqlServer(connectionString));
             }
 
-            // Registrar a ValidaÁ„o das Entidades
+            // Registrar a Valida√ß√£o das Entidades
             builder.Services.AddTransient<IValidator<Postagem>, PostagemValidator>();
             builder.Services.AddTransient<IValidator<Tema>, TemaValidator>();
             builder.Services.AddTransient<IValidator<User>, UserValidator>();
 
-            // Registrar as Classes de ServiÁo (Service)
+            // Registrar as Classes de Servi√ßo (Service)
             builder.Services.AddScoped<IPostagemService, PostagemService>();
             builder.Services.AddScoped<ITemaService, TemaService>();
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<IAuthService, AuthService>();
 
 
-            // ValidaÁ„o do Token
+            // Valida√ß√£o do Token
             builder.Services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -91,7 +91,7 @@ namespace blogpessoal
             builder.Services.AddSwaggerGen(options =>
             {
 
-                //Personalizar a P·gna inicial do Swagger
+                //Personalizar a P√°gna inicial do Swagger
                 options.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
@@ -101,27 +101,27 @@ namespace blogpessoal
                     {
                         Name = "Julia Alexandrino",
                         Email = "juliasalexandrino@hotmail.com",
-                        Url = new Uri("https://gitub.com/juhalexandrino/blog-pessoal")
+                        Url = new Uri("https://github.com/juhalexandrino/blog-pessoal")
                     },
                     License = new OpenApiLicense
                     {
                         Name = "GitHub",
-                        Url = new Uri("https://gitub.com/juhalexandrino/")
+                        Url = new Uri("https://github.com/juhalexandrino/")
                     }
                 });
 
-                //Adicionar a SeguranÁa no Swagger
+                //Adicionar a Seguran√ßa no Swagger
                 options.AddSecurityDefinition("JWT", new OpenApiSecurityScheme
                 {
                     In = ParameterLocation.Header,
-                    Description = "Digite um token JWT v·lido!",
+                    Description = "Digite um token JWT v√°lido!",
                     Name = "Authorization",
                     Type = SecuritySchemeType.Http,
                     BearerFormat = "JWT",
                     Scheme = "Bearer"
                 });
 
-                //Adicionar a configuraÁ„o visual da SeguranÁa no Swagger
+                //Adicionar a configura√ß√£o visual da Seguran√ßa no Swagger
                 options.OperationFilter<AuthResponsesOperationFilter>();
 
             });
@@ -129,7 +129,7 @@ namespace blogpessoal
             // Adicionar o Fluent Validation no Swagger
             builder.Services.AddFluentValidationRulesToSwagger();
 
-            // ConfiguraÁ„o do CORS
+            // Configura√ß√£o do CORS
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy(name: "MyPolicy",
@@ -158,7 +158,7 @@ namespace blogpessoal
             app.UseSwagger();
             app.UseSwaggerUI();
 
-            // Swagger como p·gina inicialn na nuvem
+            // Swagger como p√°gina inicialn na nuvem
 
             if (app.Environment.IsProduction())
             {
